@@ -19,4 +19,12 @@ class ExampleServiceTest {
         int math = exampleService.math(5, 5);
         assertEquals(20, math);
     }
+
+    @Test
+    void mathSecond() {
+        when(exampleRepository.sum(anyInt(), anyInt())).thenReturn(10);
+        ExampleService exampleService = new ExampleService(exampleRepository);
+        int math = exampleService.math(10, 5);
+        assertEquals(20, math);
+    }
 }
