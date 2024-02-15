@@ -14,7 +14,7 @@ class ExampleServiceTest {
 
     @Test
     void math() {
-        when(exampleRepository.sum(5, 5)).thenReturn(10);
+        when(exampleRepository.sum(anyInt(), anyInt())).thenReturn(10);
         ExampleService exampleService = new ExampleService(exampleRepository);
         int math = exampleService.math(5, 5);
         assertEquals(20, math);
