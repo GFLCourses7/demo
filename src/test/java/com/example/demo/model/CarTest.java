@@ -22,6 +22,7 @@ class CarTest {
     @Test
     public void test() {
         System.out.println("Test message");
+        System.out.println("Test message 2");
         assertEquals(carFirst, carSecond);
     }
 
