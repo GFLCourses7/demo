@@ -21,6 +21,7 @@ class CarTest {
 
     @Test
     public void test() {
+        System.out.println("Test message");
         assertEquals(carFirst, carSecond);
     }
 
